@@ -83,7 +83,7 @@ void read_line(FILE *ptr)
 	}
 }
 /**
- * parameter_to_str - split a chain into tokens for 
+ * parameter_to_str - split a chain into tokens for
  * further interpretation
  *
  * @str: point to address of the string
@@ -93,7 +93,7 @@ char **parameter_to_str(char **str)
 {
 	char **tokens = malloc(sizeof(char *) * 3);
 	size_t pos = 0;
-	int validate = 0; 
+	int validate = 0;
 
 	if (!tokens)
 	{
