@@ -83,7 +83,8 @@ void read_line(FILE *ptr)
 	}
 }
 /**
- * parameter_to_str - function
+ * parameter_to_str - split a chain into tokens for 
+ * further interpretation
  *
  * @str: point to address of the string
  * @return: double pointer
