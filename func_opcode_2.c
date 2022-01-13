@@ -70,3 +70,41 @@ void f_pstr(stack_t **stack, _uu_ unsigned int line_number)
 	printf("%c", (*stack)->n);
 	f_pstr(&(tmp->next), line_number);
 }
+/**
+ * f_rotl - rotates the stack to the top
+ *
+ * @stack: head of the linked list.
+ * @line_number: line number.
+ * Return: no return.
+ */
+void f_rotl(stack_t **stack, _uu_ unsigned int line_number)
+{
+	stack_t *first_node = NULL, *tmp = NULL, *save = NULL;
+
+	if (stack && *stack && (*stack)->next)
+	{
+		first_node = *stack;
+		*stack = (*stack)->next;
+		(*stack)->prev = NULL;
+		tmp = *stack;
+		while (tmp)
+		{
+			save = tmp;
+			tmp = tmp->next;
+		}
+		save->next = first_node;
+		first_node->next = NULL;
+		first_node->prev = save;
+	}
+}
+/**
+ * f_rotr - rotates the stack to the top
+ *
+ * @stack: head of the linked list.
+ * @line_number: line number.
+ * Return: no return.
+ */
+void f_rotr(stack_t **stack, _uu_ unsigned int line_number)
+{
+	(void)stack;
+}
