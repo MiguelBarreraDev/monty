@@ -37,7 +37,7 @@ void f_mod(stack_t **stack, unsigned int line_number)
  */
 void f_pchar(stack_t **stack, unsigned int line_number)
 {
-	if (stack == NULL || (*stack) == NULL)
+	if (!stack || !(*stack) || !(*stack)->n)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
 		band = true;
