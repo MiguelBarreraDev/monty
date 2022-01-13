@@ -25,6 +25,8 @@ void (*matcher(char *opc))(stack_t **stack, unsigned int line_number)
 		{"mod", f_mod},
 		{"pchar", f_pchar},
 		{"pstr", f_pstr},
+		{"rotl", f_rotl},
+		{"rotr", f_rotr},
 		{NULL, NULL}
 	};
 	while (list_opc[i].opcode)
