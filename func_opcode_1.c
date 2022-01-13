@@ -45,15 +45,14 @@ void f_nop(_uu_ stack_t **stack, _uu_ unsigned int line_number)
 void f_sub(stack_t **stack, unsigned int line_number)
 {
 
-	if ((*stack)->next == NULL)
+	if (!stack || !(*stack) || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
 		band = true;
 		return;
 	}
 
-	(*stack)->n -= (*stack)->next->n;
-	(*stack)->next->n = (*stack)->n;
+	(*stack)->next->n -= (*stack)->n;
 	(*stack) = (*stack)->next;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
