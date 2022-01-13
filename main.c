@@ -91,7 +91,7 @@ void read_line(FILE *ptr)
  */
 char **parameter_to_str(char **str)
 {
-	char **tokens = malloc(sizeof(char *) * 4);
+	char **tokens = malloc(sizeof(char *) * 10);
 	size_t pos = 0;
 	int validate = 0;
 
@@ -103,7 +103,7 @@ char **parameter_to_str(char **str)
 	}
 	while ((tokens[pos] = strtok(*str, " \n\t")))
 	{
-		if (strcmp(tokens[0], "push") == 0 && pos > 0)
+		if (strcmp(tokens[0], "push") == 0 && pos < 2 && pos == 1)
 		{
 			validate = validate_number(tokens[1]);
 			if (validate != -1)
@@ -111,6 +111,10 @@ char **parameter_to_str(char **str)
 				argInt = true;
 				number = atoi(tokens[pos]);
 			}
+		}
+		else
+		{
+			argInt = false;
 		}
 		*str = NULL;
 		pos++;
