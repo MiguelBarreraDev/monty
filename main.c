@@ -112,10 +112,6 @@ char **parameter_to_str(char **str)
 				number = atoi(tokens[pos]);
 			}
 		}
-		else
-		{
-			argInt = false;
-		}
 		*str = NULL;
 		pos++;
 	}
