@@ -63,6 +63,7 @@ void f_sub(stack_t **, unsigned int);
 void f_div(stack_t **, unsigned int);
 void f_mul(stack_t **, unsigned int);
 void f_mod(stack_t **, unsigned int);
+void f_pchar(stack_t **, unsigned int);
 /* Main function */
 char **parameter_to_str(char **);
 void read_line(FILE *);
