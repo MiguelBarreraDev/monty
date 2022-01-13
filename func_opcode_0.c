@@ -20,6 +20,7 @@ void f_push(stack_t **stack, unsigned int line_number)
 
 	if (!argInt)
 	{
+		free(new_node);
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		band = true;
 		return;
