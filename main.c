@@ -68,7 +68,7 @@ void read_line(FILE *ptr)
 				else
 					f(&head, nl);
 				free(items[0]);
-                                free(items);
+				free(items);
 			}
 			nl++;
 		}
