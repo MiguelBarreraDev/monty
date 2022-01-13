@@ -1,4 +1,5 @@
-#include "main.h"
+#include "monty.h"
+
 /**
  * f_mod - computes the rest of the division of the
  * second element.

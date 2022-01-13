@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 int number = 0;
 bool band = false;
