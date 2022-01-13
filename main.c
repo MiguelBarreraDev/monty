@@ -60,8 +60,6 @@ void read_line(FILE *ptr)
 			{
 				items = parameter_to_str(&line);
 				f = matcher(items[0]);
-				free(items[0]);
-				free(items);
 				if (!f)
 				{
 					fprintf(stderr, "L%ld: unknown instruction %s\n", nl, items[0]);
@@ -69,6 +67,8 @@ void read_line(FILE *ptr)
 				}
 				else
 					f(&head, nl);
+				free(items[0]);
+                                free(items);
 			}
 			nl++;
 		}
