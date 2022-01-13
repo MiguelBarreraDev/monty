@@ -67,6 +67,8 @@ void f_sub(stack_t **stack, unsigned int line_number)
  */
 void f_div(stack_t **stack, unsigned int line_number)
 {
+	int div = 0;
+
 	if (!stack || !(*stack) || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
@@ -81,7 +83,8 @@ void f_div(stack_t **stack, unsigned int line_number)
 	}
 
 
-	(*stack)->next->n /= (*stack)->n;
+	div = (*stack)->next->n / (*stack)->n;
+	(*stack)->next->n = div;
 	(*stack) = (*stack)->next;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
