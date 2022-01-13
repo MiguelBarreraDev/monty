@@ -53,7 +53,7 @@ void f_sub(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->n -= (*stack)->next->n;
-	(*stack)->next->n = (*stack)->n; 
+	(*stack)->next->n = (*stack)->n;
 	(*stack) = (*stack)->next;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
