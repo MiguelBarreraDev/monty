@@ -23,6 +23,8 @@ void (*matcher(char *opc))(stack_t **stack, unsigned int line_number)
 		{"div", f_div},
 		{"mul", f_mul},
 		{"mod", f_mod},
+		{"pchar", f_pchar},
+		{"pstr", f_pstr},
 		{NULL, NULL}
 	};
 	while (list_opc[i].opcode)
