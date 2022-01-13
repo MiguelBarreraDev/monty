@@ -8,7 +8,7 @@ where each instruction (called opcode) is sended per line. Files which contains 
 the `.m` extension. Most of the industry uses this standard but it is not required by the specification of the language.
 
 ####  Monty files
- There is not more than one instruction per line. Lines that start with # are not executed.
+ There is not more than one instruction per line.
 
 Example (`000.m`):
 ```bash
@@ -50,10 +50,6 @@ push 4$
 pall$
 julien@ubuntu:~/monty$
 ```
-## Technologies
-* Interpreter was written with C language
-* C files are compiled using `gcc 10.2.1`
-* Tested on Ubuntu 20.04 LTS
 
 ## Features
 
@@ -90,6 +86,11 @@ pcx
 1
 L3: unknown instruction pcx
 ```
+
+## Technologies
+* Interpreter was written with C language
+* C files are compiled using `gcc 10.2.1`
+* Tested on Ubuntu 20.04 LTS
 
 ## Usage
 To compile all files:
