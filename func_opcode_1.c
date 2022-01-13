@@ -73,15 +73,15 @@ void f_div(stack_t **stack, unsigned int line_number)
 		band = true;
 		return;
 	}
-	if ((*stack)->next->n == 0)
+	if ((*stack)->n == 0)
 	{
 		fprintf(stderr, "L%u can't be divided by zero\n", line_number);
 		band = true;
 		return;
 	}
 
-	(*stack)->n /= (*stack)->next->n;
-	(*stack)->next->n = (*stack)->n;
+
+	(*stack)->next->n /= (*stack)->n;
 	(*stack) = (*stack)->next;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
