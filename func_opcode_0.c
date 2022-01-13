@@ -7,7 +7,7 @@
  * @line_number: line number.
  * Return: no return.
  */
-void f_push(stack_t **stack, _uu_ unsigned int line_number)
+void f_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
 
@@ -20,7 +20,7 @@ void f_push(stack_t **stack, _uu_ unsigned int line_number)
 
 	if (!argInt)
 	{
-		fprintf(stderr, "L<%d>: usage: push integer\n", line_number);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		band = true;
 		return;
 	}
@@ -62,7 +62,7 @@ void f_pint(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack) == NULL)
 	{
-		fprintf(stderr, "L<%u>: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		band = true;
 		return;
 	}
@@ -80,7 +80,7 @@ void f_pop(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack) == NULL)
 	{
-		fprintf(stderr, "L<%u>: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 		band = true;
 		return;
 	}
@@ -111,7 +111,7 @@ void f_swap(stack_t **stack, unsigned int line_number)
 
 	if ((*stack)->next == NULL)
 	{
-		fprintf(stderr, "L<%u>: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		band = true;
 		return;
 	}

@@ -63,7 +63,7 @@ void read_line(FILE *ptr)
 				free(items[0]);
 				if (!f)
 				{
-					fprintf(stderr, "L<%ld>: unknown instruction <%s>\n", nl, items[0]);
+					fprintf(stderr, "L%ld: unknown instruction %s\n", nl, items[0]);
 					band = true;
 				}
 				else
