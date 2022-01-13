@@ -91,7 +91,7 @@ void read_line(FILE *ptr)
  */
 char **parameter_to_str(char **str)
 {
-	char **tokens = malloc(sizeof(char *) * 10);
+	char **tokens = malloc(sizeof(char *) * 1024);
 	size_t pos = 0;
 	int validate = 0;
 
