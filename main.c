@@ -18,19 +18,19 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		fprintf(stderr,"USAGE: monty file\n");
-		exit (EXIT_FAILURE);
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
 	}
 	path = argv[1];
 	ptr = fopen(path, "r");
 	if (ptr == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file <%s>\n", path);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	read_line(ptr);
 
-	return 0;
+	return (0);
 }
 
 /**
@@ -48,12 +48,12 @@ void read_line(FILE *ptr)
 	void (*f)(stack_t **stack, unsigned int line_number) = NULL;
 	stack_t *head = NULL;
 
-	while(r_size != EOF)
+	while (r_size != EOF)
 	{
 		len = 0;
 		argInt = false;
 		r_size = getline(&line, &len, ptr);
-		if(r_size != EOF)
+		if (r_size != EOF)
 		{
 			_trim(&line);
 			if (!(*line == '#' || strlen(line) < 2))
@@ -87,7 +87,7 @@ void read_line(FILE *ptr)
  * further interpretation
  *
  * @str: point to address of the string
- * @return: double pointer
+ * Return: double pointer
  */
 char **parameter_to_str(char **str)
 {
