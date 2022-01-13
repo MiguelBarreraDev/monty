@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * _trim - function that removes whitespace at the beginning
  * @str: double pointer to string to format
