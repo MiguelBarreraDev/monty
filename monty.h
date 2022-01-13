@@ -11,7 +11,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
-
+#include <ctype.h>
 /* Macros */
 #define cv(f) ((void)f)
 #define _uu_  __attribute__((unused))
