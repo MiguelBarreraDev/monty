@@ -65,6 +65,8 @@ void f_mul(stack_t **, unsigned int);
 void f_mod(stack_t **, unsigned int);
 void f_pchar(stack_t **, unsigned int);
 void f_pstr(stack_t **, unsigned int);
+void f_rotl(stack_t **, unsigned int);
+void f_rotr(stack_t **, unsigned int);
 /* Main function */
 char **parameter_to_str(char **);
 void read_line(FILE *);
