@@ -29,10 +29,18 @@ void f_mod(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
+ * f_pchar - print the char value of the first element.
  *
- *
+ * @stack: head of the linked list.
+ * @line_number: line number.
+ * Return: no return.
  */
 void f_pchar(_uu_ stack_t **stack, _uu_ unsigned int line_number)
 {
-	return;
+	if ((*stack)->next == NULL)
+	{
+		fprintf(stderr, "L<%u>: can't pchar, value out of range\n", line_number);
+		band = true;
+		return;
+	}
 }
