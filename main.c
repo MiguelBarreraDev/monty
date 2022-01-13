@@ -103,7 +103,6 @@ char **parameter_to_str(char **str)
 	}
 	while ((tokens[pos] = strtok(*str, " \n\t")))
 	{
-		
 		if (strcmp(tokens[0], "push") == 0 && pos > 0)
 		{
 			validate = validate_number(tokens[1]);
