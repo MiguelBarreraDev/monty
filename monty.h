@@ -19,7 +19,7 @@
 extern bool band;
 extern int number;
 extern bool argInt;
-
+extern bool mode;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -67,6 +67,9 @@ void f_pchar(stack_t **, unsigned int);
 void f_pstr(stack_t **, unsigned int);
 void f_rotl(stack_t **, unsigned int);
 void f_rotr(stack_t **, unsigned int);
+
+void f_mode(stack_t **, unsigned int);
+
 /* Main function */
 char **parameter_to_str(char **);
 void read_line(FILE *);

@@ -3,7 +3,7 @@
 int number = 0;
 bool band = false;
 bool argInt = false;
-
+bool mode = false;
 /**
  * main - entry point and general management.
  *
