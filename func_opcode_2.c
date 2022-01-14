@@ -106,5 +106,21 @@ void f_rotl(stack_t **stack, _uu_ unsigned int line_number)
  */
 void f_rotr(stack_t **stack, _uu_ unsigned int line_number)
 {
-	(void)stack;
+	stack_t *first_node = NULL, *tmp = NULL, *save = NULL;
+
+	if (stack && *stack && (*stack)->next)
+	{
+		first_node = *stack;
+		tmp = *stack;
+		while (tmp)
+		{
+			save = tmp;
+			tmp = tmp->next;
+		}
+		save->next = first_node;
+		first_node->prev = save;
+		(save->prev)->next = NULL;
+		*stack = save;
+		save->prev = NULL;
+	}
 }
