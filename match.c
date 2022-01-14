@@ -36,10 +36,13 @@ void (*matcher(char *opc))(stack_t **stack, unsigned int line_number)
 		i++;
 	}
 
-	if (strcmp(list_opc[i].opcode, "stack") == 0)
-		mode = false;
-	if (strcmp(list_opc[i].opcode, "queue") == 0)
-		mode = true;
-
+	if (strcmp(opc, "stack") == 0 || strcmp(opc, "queue") == 0)
+	{
+		if (strcmp(opc, "queue") == 0)
+			mode = true;
+		else
+			mode = false;
+		return (f_trash);
+	}
 	return (NULL);
 }
