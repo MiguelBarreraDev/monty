@@ -13,7 +13,6 @@
 #include <unistd.h>
 #include <ctype.h>
 /* Macros */
-#define cv(f) ((void)f)
 #define _uu_  __attribute__((unused))
 /* Shared variables */
 extern bool band;
@@ -67,9 +66,7 @@ void f_pchar(stack_t **, unsigned int);
 void f_pstr(stack_t **, unsigned int);
 void f_rotl(stack_t **, unsigned int);
 void f_rotr(stack_t **, unsigned int);
-
-void f_mode(stack_t **, unsigned int);
-
+void f_trash(stack_t **stack, _uu_ unsigned int line_number);
 /* Main function */
 char **parameter_to_str(char **);
 void read_line(FILE *);
