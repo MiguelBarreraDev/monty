@@ -82,12 +82,9 @@ void f_div(stack_t **stack, unsigned int line_number)
 		return;
 	}
 
-
 	div = (*stack)->next->n / (*stack)->n;
-	(*stack)->next->n = div;
-	(*stack) = (*stack)->next;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	f_pop(stack, line_number);
+	(*stack)->n = div;
 }
 
 /**
