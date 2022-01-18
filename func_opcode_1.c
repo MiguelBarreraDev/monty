@@ -69,7 +69,7 @@ void f_div(stack_t **stack, unsigned int line_number)
 {
 	int div = 0;
 
-	if (!stack || !(*stack) || (*stack)->next == NULL)
+	if ((*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 		band = true;
